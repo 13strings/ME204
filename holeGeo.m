@@ -30,7 +30,7 @@ legend("Combined stress", "Yield strength, FOS = 2");
 xlabel("thickness of radial circle (mm)");
 ylabel("Combined stress (MPa)");
 
-t_optimal = 2 /1000; % from plot
+t_optimal = 2.65/1000; % from plot
 
 r_i_array = linspace(1/1000, 10/1000, 100);
 

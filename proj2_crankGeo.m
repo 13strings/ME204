@@ -2,7 +2,7 @@
 clear; clc; close all;
 
 Sy = 2.76e+8; % N/m^2, Aluminum 6061-T6
-T_m = 2.22; % Nm, from the gearbox output
+T_m = 1.5; % Nm, from the gearbox output
 FOS = 2;
 S_allow = Sy/FOS;
 
