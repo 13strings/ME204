@@ -1,7 +1,7 @@
 clear all; close all; clc;
 
 preload = 24.91 ; % Newtons, 5.6 lbf
-k = 1927 ; % N/m
+k = 2084 ; % N/m, 11.9lbF
 
 theta2 = linspace(0,360,361); % deg
 
@@ -21,5 +21,5 @@ title("Moment over revolution");
 xlabel("Theta 2 (deg)");
 ylabel("Moment (N-m)");
 
-avg_m = mean(abs(moment))
-max_m = max(abs(moment))
+avg_m = mean(abs(moment));
+max_m = max(abs(moment));

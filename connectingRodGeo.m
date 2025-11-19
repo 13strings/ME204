@@ -1,7 +1,7 @@
 clear; clc; close all;
 
 Sy = 2.76e+8; % N/m^2, Aluminum 6061-T6
-T_m = 2.22; % Nm, from the gearbox output
+T_m = 1.5264; % Nm, from the gearbox output
 FOS = 2;
 S_allow = Sy/FOS;
 
@@ -9,7 +9,7 @@ F_spring = 110; % N
 
 % geometry - starting guesses
 l = 130/1000; % m
-t = 4/1000; % m
+t = 4.763/1000; % m
 w_array = linspace(1/1000, 12/1000, 100);
 
 

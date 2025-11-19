@@ -3,16 +3,16 @@
 clear; clc; close all;
 
 Sy = 2.76e+8; % N/m^2, Aluminum 6061-T6
-T_m = 2.22; % Nm, from the gearbox output
+T_m = 1.5264; % Nm, from the gearbox output
 FOS = 2;
 S_allow = Sy/FOS;
 
-d = 4/1000; %  from thickness of crankGeo
+d = 4.763/1000; %  from thickness of crankGeo
 t_array = linspace(1/1000, 5/1000, 100); % defined as r_o of rod - r_i of rod
 
 F_spring = 110; % N
 
-r_i = 5/1000; % also have to optimize this
+r_i = 5/1000; % this is the radius of the bearing
 
 r_c = r_i + t_array/2;
 

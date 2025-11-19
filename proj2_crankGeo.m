@@ -2,7 +2,7 @@
 clear; clc; close all;
 
 Sy = 2.76e+8; % N/m^2, Aluminum 6061-T6
-T_m = 1.5; % Nm, from the gearbox output
+T_m = 1.5264; % Nm, from the gearbox output
 FOS = 2;
 S_allow = Sy/FOS;
 
@@ -23,7 +23,7 @@ legend("Bending stress", "Yield strength, FOS = 2");
 xlabel("Height (mm)");
 ylabel("Bending stress (Pa)");
 
-h_optimal = 5/1000; % m, picked from the plot
+h_optimal = 10/1000; % m, picked from the plot
 
 t_array = linspace(3/1000, 13/1000, 100);
 

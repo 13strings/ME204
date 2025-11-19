@@ -7,7 +7,7 @@ clear; clc; close all;
 %% Constants
 global STROKE PRELOAD SPRING_CONSTANT PULLEY_RATIO K_SPRING F_PRELOAD
 
-STROKE = 41e-3;         % 40mm in meters
+STROKE = 40e-3;         % 40mm in meters
 PRELOAD = 5.6;           % lbf
 SPRING_CONSTANT = 11.9;  % lbf/in
 PULLEY_RATIO = 1/1;      % Force reduction from pulley system
