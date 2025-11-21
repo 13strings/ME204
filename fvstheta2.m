@@ -30,11 +30,21 @@ ylabel("Moment (N-m)");
 
 %% solving for current from motor over cycle
 
-current = (t_gearbox/gear_ratio + t_friction)./k_motor;
+t_motor = t_gearbox / gear_ratio;
+
+for i = 1:length(t_motor)
+    if t_motor(i) > 0 % mmotor is driving
+        current(i) = (t_motor(i) + t_friction)./k_motor;
+    else 
+        current(i) = (t_motor(i) - t_friction)./k_motor;
+    end
+end
+
 current_pos = max(current, 0);
+current_abs = abs(current);
 
 figure(2)
-plot(theta_crank, current_pos);
+plot(theta_crank, current);
 title("Current over revolution");
 xlabel("Crank angle (deg)");
 ylabel("Current (A)");
@@ -43,7 +53,7 @@ ylabel("Current (A)");
 V_app = 2.5; % V
 R = 0.8; % Ohm
 
-speed_motor = (V_app - current_pos*R) / k_motor; % rad /s
+speed_motor = (V_app - current*R) / k_motor; % rad /s
 speed_crank = speed_motor / gear_ratio;
 
 figure(3)
@@ -69,7 +79,7 @@ dt = dtheta_crank ./ speed_crank_avg;
 time = [0, cumsum(dt)];
 
 T_cycle = time(end);
-average_current = trapz(time, current_pos) / T_cycle
+average_current = trapz(time, current_abs) / T_cycle
 
 %% plot of pos over time to 
 
