@@ -48,14 +48,14 @@ speed_crank = speed_motor / gear_ratio;
 
 figure(3)
 plot(theta_crank, speed_motor * 180/pi / 60);
-title("Motor Speed over 1 motor revolution");
+title("Motor Speed over 1 crank revolution");
 xlabel("Crank Angle (deg)");
 ylabel("Motor Speed (RPM)");
 
 
 figure(4)
 plot(theta_crank, speed_crank * 180/ pi / 60);
-title("Crank Speed over revolution");
+title("Crank Speed over 1 crank revolution");
 xlabel("Crank Angle (deg)");
 ylabel("Crank Speed (RPM)");
 
